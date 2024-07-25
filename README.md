@@ -2,10 +2,11 @@
 
 _Forked from [avillafiorita/jekyll-datapage_gen](https://github.com/avillafiorita/jekyll-datapage_gen)_
 
+- Removes "downcase" for generating file names.
+
 ## Configuration
 
 Add to ```_config.yml```: 
-
 
 ```
 page_gen-dirs: [true|false]
@@ -50,7 +51,15 @@ non-fiction:
 
 ```
 
-To generate pages for items under "fiction": 
+To generate pages for items under "fiction", add this to ```_config.yml```: 
+
+```
+page_gen:
+- data: 'books.fiction'
+  template: 'page'
+  name: 'title'
+  dir: 'books'
+```
 
 ### Additional fields (optional)
 
@@ -78,4 +87,4 @@ See [avillafiorita/jekyll-datapage_gen](https://github.com/avillafiorita/jekyll-
 
 ## License
 
-Distributed under the terms of the [[http://opensource.org/licenses/MIT][MIT License]].
+Distributed under the terms of the [MIT License](http://opensource.org/licenses/MIT).
